@@ -1,4 +1,4 @@
-- hosts: 10.0.69.159
+- hosts: all
   tasks:
      - name: create file
        file: path=/tmp/yallo state=touch

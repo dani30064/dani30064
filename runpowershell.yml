@@ -1,5 +1,5 @@
 - hosts: all
   tasks:
     - name: example echo
-      win_shell: |echo %HOMEDIR%
+      win_shell: echo %HOMEDIR%
 

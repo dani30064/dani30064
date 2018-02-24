@@ -1,0 +1,31 @@
+- hosts: localhost 
+  connection: local
+  gather_facts: False
+  vars:
+    prefix: newvm
+    count: 1
+    padding: 3
+    vmware_template: template_el7
+  tasks:
+    - name: create the instance
+      vmware_guests:
+        validate_certs: no
+        hostname: "{{ lookup('env', 'VMWARE_HOST') }}"
+        username: "{{ lookup('env', 'VMWARE_USER') }}"
+        password: "{{ lookup('env', 'VMWARE_PASSWORD') }}"
+        name: "{{ prefix }}"
+        exact_count: "{{ count }}"
+        exact_count_padding: "{{ padding }}"
+        wait_for_ip_address: yes
+        template: "{{ vmware_template }}"
+        folder: "{{ folder }}"
+        datacenter: "{{ datacenter }}"
+        esxi_hostname: "{{ esxi }}"
+        disk:
+            - size_gb: 10
+              type: thin
+              datastore: "{{ datastore }}"
+        nic:
+            - type: vmxnet3
+              network: VM Network
+              network_type: standard

@@ -1,0 +1,10 @@
+action: testConnection
+parameters:
+  db:
+    driver: mssql
+    host: all
+    port: 1433
+    database: GEN_INFRA
+    user: sa
+    password: Passw0rd2017$
+

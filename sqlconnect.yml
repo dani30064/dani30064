@@ -1,3 +1,4 @@
+---
 action: testConnection
 parameters:
   db:

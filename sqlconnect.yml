@@ -1,11 +1,10 @@
 ---
-action: testConnection
-parameters:
-  db:
-    driver: mssql
-    host: all
+- hosts: all
+   legacy:
+    adapter: sqlserver
+    mode: odbc
+    host: 10.0.69.110
+    database: HP_OO
     port: 1433
-    database: GEN_INFRA
-    user: sa
+    username: sa
     password: Passw0rd2017$
-

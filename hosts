@@ -1,7 +1,31 @@
 [windows]
 10.0.69.110
 
+[windows:vars]
+ansible_user = Administrator
+ansible_password = Passw0rd2017$
+ansible_port = 5985
+ansible_connection = winrm
+# The following is necessary for Python 2.7.9+ when using default WinRM self-signed certificates:
+ansible_winrm_server_cert_validation = ignore
+ansible_winrm_scheme = http
+ansible_become = false
+ansible_winrm_message_encryption = auto
+ansible_winrm_transport = ntlm
 
-[dba]
+
+[database]
 10.0.69.140
 10.0.69.120
+
+[database:vars]
+ansible_user = Administrator
+ansible_password = Passw0rd2017$
+ansible_port = 5985
+ansible_connection = winrm
+# The following is necessary for Python 2.7.9+ when using default WinRM self-signed certificates:
+ansible_winrm_server_cert_validation = ignore
+ansible_winrm_scheme = http
+ansible_become = false
+ansible_winrm_message_encryption = auto
+ansible_winrm_transport = ntlm

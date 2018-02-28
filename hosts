@@ -1,8 +1,7 @@
-[all]
+[windows]
 10.0.69.110
 
-[all:vars]
-ansible_ssh_user=the_username
-ansible_ssh_pass=the_password
-ansible_ssh_port=5985
-ansible_connection=winrm
+
+[dba]
+10.0.69.140
+10.0.69.120

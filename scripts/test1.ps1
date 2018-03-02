@@ -1,3 +1,3 @@
-##(Get-WmiObject -Class Win32_ComputerSystem -Property Name).Name
+(Get-WmiObject -Class Win32_ComputerSystem -Property Name).Name
 ##mkdir C:\gmd
-ipconfig
+##ipconfig

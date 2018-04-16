@@ -1,3 +1,6 @@
+[linux]
+10.0.69.70 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=passw0rd host_key_checking=false
+
 [windows]
 10.0.69.110
 
